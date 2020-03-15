@@ -193,3 +193,23 @@ export function keyBoardAPI(keyBoardName) {
       return KeyBoard
     }
 }
+
+export function customKeyBoardAPI(keyBoardName) {
+  return function(CustomView) {
+    class KeyBoard extends Component {
+        render() {
+            return (
+                <CustomView
+                    insertText = {insertText}
+                    clearFocus = {clearFocus}
+                    clearAll = {clearAll}
+                    backSpace = {backSpace}
+                    {...this.props}
+                />
+            )
+        }
+    }
+    register(keyBoardName, ()=>KeyBoard);
+    return KeyBoard
+  }
+}

@@ -10,6 +10,9 @@ import {
     currentHeight,
 
     CustomTextInput,
+    customKeyBoardAPI,
+    install,
+    uninstall
 } from './customKeyboard'
 
 import NumberKeyBoardView from './views/NumberKeyBoard'
@@ -29,4 +32,7 @@ export {
     NumberKeyBoardView,
     SafeKeyBoardView,
     keyBoardAPI,
+    customKeyBoardAPI,
+    install,
+    uninstall
 }
